@@ -35,7 +35,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('copy', function() {
-  runSequence('copyHTML', 'copyImages');
+  runSequence('copyHTML', 'copyImages', browserSync.reload);
 });
 
 gulp.task('copyHTML', function() {
