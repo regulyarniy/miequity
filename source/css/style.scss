@@ -63,17 +63,78 @@ $brick: #efae7c;
 }
 
 .container {
-  max-width: 1920px;
+  max-width: 1900px;
   margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .body {
+  min-width: 1900px;
+
+  font-weight: 400;
   font-size: 16px;
   line-height: 30px;
   font-family: $roboto-slab;
   color: $gray92;
 
   background-color: $white;
+}
+
+// Buttons
+// =========================================================================
+
+.button {
+  display: inline-block;
+
+  vertical-align: middle;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.button--round {
+  position: relative;
+
+  width: 122px;
+  height: 122px;
+
+  background-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $white;
+  border-radius: 50%;
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+
+    width: 60px;
+    height: 60px;
+
+    background-image: url("../img/button--hero.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.button--hero {
+  width: 130px;
+  height: 130px;
+
+  background-color: $white;
+  &::before {
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+
+    width: 60px;
+    height: 60px;
+
+    background-image: url("../img/button--hero.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
 }
 
 // Header
@@ -92,6 +153,13 @@ $brick: #efae7c;
   margin: 0;
   padding: 0;
   padding-right: 55px;
+}
+
+.main-nav__logo-link {
+  margin: 0;
+  padding: 0;
+
+  line-height: 0;
 }
 
 .main-nav__logo {
@@ -130,15 +198,18 @@ $brick: #efae7c;
     font-weight: 900;
     font-size: 14px;
     line-height: 30px;
+    font-family: $roboto;
     vertical-align: middle;
     text-align: center;
     color: $blue42;
     text-transform: uppercase;
+    letter-spacing: 0.16em;
 
-    border-radius: 5px;
-
-    &:hover {
-      background-color: $brick;
+    border: 1px solid transparent;
+    &:hover,
+    &:focus {
+      border: 1px solid $brick;
+      outline: none;
     }
   }
 
@@ -155,4 +226,68 @@ $brick: #efae7c;
 
     background-color: $brick;
   }
+}
+
+// Main
+// =========================================================================
+
+.main {
+  color: inherit;
+}
+
+.main--index {
+  color: inherit;
+}
+
+// Hero
+// =========================================================================
+
+.hero {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 990px;
+
+  color: $white;
+
+  background-color: #6f6ca3;
+  background-image: url("../img/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.hero__slogan {
+  max-width: 950px;
+  margin: 0;
+  margin-top: 270px;
+  margin-bottom: 15px;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 120px;
+  line-height: 140px;
+  text-align: center;
+  color: inherit;
+  letter-spacing: -0.06em;
+  & .hero__dot {
+    margin-left: -2px;
+
+    color: $brick;
+  }
+}
+
+.hero__description {
+  max-width: 550px;
+  margin: 0;
+  margin-bottom: 95px;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 38px;
+  font-family: $roboto;
+  text-align: center;
 }
