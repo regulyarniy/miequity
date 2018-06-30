@@ -1,0 +1,33 @@
+{
+  "name": "miequity",
+  "version": "1.0.0",
+  "description": "HTML layout of MIEQUITY PSD design template from www.massimpressions.com & https://www.behance.net/tranmautritam",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "emitter-steward": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^3.0.0",
+    "run-sequence": "^2.2.1"
+  },
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/regulyarniy/miequity.git"
+  },
+  "author": "regulyarniy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/regulyarniy/miequity/issues"
+  },
+  "homepage": "https://github.com/regulyarniy/miequity#readme"
+}
