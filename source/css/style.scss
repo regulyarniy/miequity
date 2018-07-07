@@ -38,8 +38,9 @@ $roboto: "Roboto", "Arial", sans-serif;
 
 $white: #ffffff;
 $blue42: #423f54;
+$blue64: #6472b7;
 $gray76: #767481;
-$gray92: #9a98a0;
+$gray9a: #9a98a0;
 $brick: #efae7c;
 
 // Basic
@@ -76,7 +77,7 @@ $brick: #efae7c;
   font-size: 16px;
   line-height: 30px;
   font-family: $roboto-slab;
-  color: $gray92;
+  color: $gray9a;
 
   background-color: $white;
 }
@@ -239,6 +240,11 @@ $brick: #efae7c;
   color: inherit;
 }
 
+//Dots in end of headers
+.brick {
+  color: $brick;
+}
+
 // Hero
 // =========================================================================
 
@@ -290,4 +296,154 @@ $brick: #efae7c;
   line-height: 38px;
   font-family: $roboto;
   text-align: center;
+}
+
+// About-services
+// =========================================================================
+
+.about-services {
+  min-height: 970px;
+  margin-bottom: 100px;
+
+  background-image: url("../img/about-services.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.about-services__wrapper {
+  width: 845px;
+  width: 670px;
+  padding-top: 140px;
+  padding-left: 150px;
+}
+
+.section__label {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 60px;
+  font-family: $roboto;
+  color: $blue42;
+  text-transform: uppercase;
+  letter-spacing: 0.008em;
+
+  opacity: 0.5;
+}
+
+.section__title {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 100px;
+  padding: 0;
+
+  font-size: 60px;
+  line-height: 60px;
+  color: $blue42;
+  letter-spacing: -0.0002em;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+
+    width: 130px;
+    height: 4px;
+
+    background-color: $brick;
+  }
+}
+
+.section__content {
+  margin-bottom: 40px;
+}
+
+.section__content--big {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: $roboto-slab;
+  color: $gray76;
+}
+
+.section__content--small {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  font-family: $roboto;
+  color: $gray9a;
+}
+
+.section__link {
+  position: relative;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 60px;
+  font-family: $roboto;
+  color: $blue64;
+  text-transform: uppercase;
+  letter-spacing: 0.008em;
+
+  &:hover,
+  &:focus {
+    color: $brick;
+  }
+
+  &:hover::before {
+    background-color: $brick;
+  }
+
+  &:hover::after {
+    border-color: transparent transparent transparent $brick;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: 6px;
+
+    display: block;
+    width: 9px;
+    height: 8px;
+
+    background-color: $blue64;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -43px;
+    bottom: 0;
+
+    display: block;
+    width: 0;
+    height: 0;
+
+    border-width: 10px 0 10px 14px;
+    border-style: solid;
+    border-color: transparent transparent transparent $blue64;
+  }
+}
+
+// About-services
+// =========================================================================
+
+.about-us {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+
+  background-image: url("../../build/img/about-us.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.about-us__wrapper {
+  align-self: flex-end;
+  width: 840px;
+  margin-left: 800px;
 }

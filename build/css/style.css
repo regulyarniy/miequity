@@ -474,6 +474,9 @@ a {
 .main--index {
   color: inherit; }
 
+.brick {
+  color: #efae7c; }
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -526,3 +529,119 @@ a {
   line-height: 38px;
   font-family: "Roboto", "Arial", sans-serif;
   text-align: center; }
+
+.about-services {
+  min-height: 970px;
+  margin-bottom: 100px;
+  background-image: url("../img/about-services.png");
+  background-repeat: no-repeat;
+  background-position: right top; }
+
+.about-services__wrapper {
+  width: 845px;
+  width: 670px;
+  padding-top: 140px;
+  padding-left: 150px; }
+
+.section__label {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 60px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #423f54;
+  text-transform: uppercase;
+  letter-spacing: 0.008em;
+  opacity: 0.5; }
+
+.section__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 100px;
+  padding: 0;
+  font-size: 60px;
+  line-height: 60px;
+  color: #423f54;
+  letter-spacing: -0.0002em; }
+  .section__title::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 130px;
+    height: 4px;
+    background-color: #efae7c; }
+
+.section__content {
+  margin-bottom: 40px; }
+
+.section__content--big {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: "Roboto Slab", "Arial", sans-serif;
+  color: #767481; }
+
+.section__content--small {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #9a98a0; }
+
+.section__link {
+  position: relative;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 60px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #6472b7;
+  text-transform: uppercase;
+  letter-spacing: 0.008em; }
+  .section__link:hover, .section__link:focus {
+    color: #efae7c; }
+  .section__link:hover::before {
+    background-color: #efae7c; }
+  .section__link:hover::after {
+    border-color: transparent transparent transparent #efae7c; }
+  .section__link::before {
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: 6px;
+    display: block;
+    width: 9px;
+    height: 8px;
+    background-color: #6472b7; }
+  .section__link::after {
+    content: "";
+    position: absolute;
+    right: -43px;
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 10px 0 10px 14px;
+    border-style: solid;
+    border-color: transparent transparent transparent #6472b7; }
+
+.about-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-image: url("../../build/img/about-us.jpg");
+  background-repeat: no-repeat;
+  background-position: left top; }
+
+.about-us__wrapper {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 840px;
+  margin-left: 800px; }
