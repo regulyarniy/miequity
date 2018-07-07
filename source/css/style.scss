@@ -105,6 +105,14 @@ $brick: #efae7c;
   border-style: solid;
   border-color: $white;
   border-radius: 50%;
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $brick;
+  }
+  &:active {
+    opacity: 0.8;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -397,11 +405,13 @@ $brick: #efae7c;
     color: $brick;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     background-color: $brick;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus::after {
     border-color: transparent transparent transparent $brick;
   }
 

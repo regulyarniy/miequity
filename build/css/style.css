@@ -361,6 +361,10 @@ a {
   border-style: solid;
   border-color: #ffffff;
   border-radius: 50%; }
+  .button--round:hover, .button--round:focus, .button--round:active {
+    border-color: #efae7c; }
+  .button--round:active {
+    opacity: 0.8; }
   .button--round::before {
     content: "";
     position: absolute;
@@ -606,9 +610,9 @@ a {
   letter-spacing: 0.008em; }
   .section__link:hover, .section__link:focus {
     color: #efae7c; }
-  .section__link:hover::before {
+  .section__link:hover::before, .section__link:focus::before {
     background-color: #efae7c; }
-  .section__link:hover::after {
+  .section__link:hover::after, .section__link:focus::after {
     border-color: transparent transparent transparent #efae7c; }
   .section__link::before {
     content: "";
