@@ -37,8 +37,10 @@ $roboto: "Roboto", "Arial", sans-serif;
 // =========================================================================
 
 $white: #ffffff;
+$black: #000000;
 $blue42: #423f54;
 $blue64: #6472b7;
+$bluec1: #c1e1f4;
 $gray76: #767481;
 $gray9a: #9a98a0;
 $brick: #efae7c;
@@ -463,4 +465,123 @@ $brick: #efae7c;
 .about-us__wrapper {
   width: 680px;
   margin-left: auto;
+}
+
+// Partners
+// =========================================================================
+
+.partners {
+  margin-bottom: 150px;
+  padding-right: 150px;
+  padding-left: 150px;
+}
+
+.partners__list {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  box-shadow: 0 0 72px 18px rgba($blue64, 0.2);
+}
+
+.partners__partner {
+  width: 390px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  &:nth-child(n) {
+    border-right: 1px solid rgba($gray76, 0.5);
+  }
+  &:nth-child(4n) {
+    border-right: none;
+  }
+  &:nth-child(n+5) {
+    border-top: 1px solid rgba($gray76, 0.5);
+  }
+}
+
+.partners__link {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background-color: transparent;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    filter: none;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    background-color: $bluec1;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.partners__link--asana {
+  background-image: url("../img/asana.png");
+  filter: saturate(0);
+}
+
+.partners__link--classy {
+  background-image: url("../img/classy.png");
+  filter: saturate(0);
+}
+
+.partners__link--spotify {
+  background-image: url("../img/spotify.png");
+  filter: saturate(0);
+}
+
+.partners__link--treehouse {
+  background-image: url("../img/treehouse.png");
+  filter: saturate(0);
+}
+
+.partners__link--slack {
+  background-image: url("../img/slack.png");
+  filter: saturate(0);
+}
+
+.partners__link--oracle {
+  background-image: url("../img/oracle.png");
+  filter: saturate(0);
+}
+
+.partners__link--kickstarter {
+  background-image: url("../img/kickstarter.png");
+  filter: saturate(0);
+}
+
+.partners__link--disqus {
+  background-image: url("../img/disqus.png");
+  filter: saturate(0);
 }
