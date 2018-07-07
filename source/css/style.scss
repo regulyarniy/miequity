@@ -114,7 +114,7 @@ $brick: #efae7c;
     width: 60px;
     height: 60px;
 
-    background-image: url("../img/button--hero.svg");
+    background-image: url("../img/button--round.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
@@ -136,6 +136,12 @@ $brick: #efae7c;
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
+}
+
+.button--center {
+  align-self: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 // Header
@@ -436,14 +442,15 @@ $brick: #efae7c;
   flex-grow: 0;
   flex-shrink: 0;
   flex-wrap: nowrap;
+  margin-bottom: 150px;
 
-  background-image: url("../../build/img/about-us.jpg");
+  background-image: url("../img/about-us.jpg");
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: left center;
+  background-size: contain;
 }
 
 .about-us__wrapper {
-  align-self: flex-end;
-  width: 840px;
-  margin-left: 800px;
+  width: 680px;
+  margin-left: auto;
 }
