@@ -154,6 +154,42 @@ $brick: #efae7c;
   margin-left: auto;
 }
 
+.button--slider {
+  position: absolute;
+  top: 2px;
+  left: 0;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  margin: auto;
+  padding: 0;
+
+  vertical-align: middle;
+
+  background-color: rgba($white, 0.7);
+  background-image: none;
+  border: none;
+  &::before {
+    content: none;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba($brick, 0.7);
+  }
+}
+
+.button--slider-active {
+  top: 0;
+
+  width: 12px;
+  height: 12px;
+
+  background-color: $brick;
+}
+
 // Header
 // =========================================================================
 
@@ -584,4 +620,109 @@ $brick: #efae7c;
 .partners__link--disqus {
   background-image: url("../img/disqus.png");
   filter: saturate(0);
+}
+
+// Testimonial
+// =========================================================================
+
+.testimonial {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 880px;
+
+  color: $white;
+
+  background-color: $gray9a;
+  background-image: url("../img/testimonial.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.section__slider {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.slider__logo {
+  width: 101px;
+  height: 120px;
+  margin-top: 250px;
+  margin-right: auto;
+  margin-bottom: 40px;
+  margin-left: auto;
+}
+
+.testimonial__content {
+  width: 950px;
+  margin: 0;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+  padding: 0;
+
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: -0.06em;
+}
+
+.testimonial__author {
+  width: 950px;
+  margin: 0;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  padding: 0;
+
+  font-size: 27px;
+  line-height: 27px;
+  font-family: $roboto;
+  text-align: center;
+  font-style: normal;
+}
+
+.testimonial__company {
+  width: 950px;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: $roboto;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+
+.section__slidenav {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-items: center;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+  padding: 0;
+  padding-left: 15px;
+
+  list-style: none;
+}
+
+.section__slidecounter {
+  position: relative;
+
+  width: 15px;
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
 }
