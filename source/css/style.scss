@@ -553,6 +553,7 @@ $brick: #efae7c;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 
+  transition: all 0.5s ease;
   &::before {
     content: "";
     position: absolute;
@@ -575,6 +576,8 @@ $brick: #efae7c;
   &:focus::before,
   &:active::before {
     background-color: $bluec1;
+
+    transition: all 0.5s ease;
   }
 
   &:active {
