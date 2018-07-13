@@ -729,3 +729,26 @@ $brick: #efae7c;
   margin-right: 10px;
   padding: 0;
 }
+
+// Testimonial
+// =========================================================================
+
+.objective {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.section__title--centered::after {
+  left: calc(50% - 65px);
+}
+
+.section__content--medium {
+  max-width: 450px;
+}
+
+.section__content--centered {
+  text-align: center;
+}
