@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "HTML layout of MIEQUITY PSD design template from www.massimpressions.com & https://www.behance.net/tranmautritam",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "hoek": "^5.0.3"
+  },
   "devDependencies": {
     "browser-sync": "^2.24.5",
     "emitter-steward": "^1.0.0",
