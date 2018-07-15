@@ -964,3 +964,43 @@ $brick: #efae7c;
     background-image: url("../img/portfolio__arrow.svg");
   }
 }
+
+// Call to action
+// =========================================================================
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 560px;
+
+  color: $white;
+
+  background-color: #6a76b5;
+  background-image: url("../img/cta.jpg");
+  background-repeat: no-repeat;
+}
+
+.cta__title {
+  margin: 0;
+  margin-top: 150px;
+  margin-bottom: 10px;
+  padding: 0;
+
+  font-size: 80px;
+  line-height: 130px;
+  font-family: $roboto-slab;
+  text-align: center;
+  font-style: normal;
+  letter-spacing: -0.006em;
+}
+
+.cta__content {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
+  font-size: 24px;
+  line-height: 38px;
+  font-family: $roboto;
+}
