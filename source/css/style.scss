@@ -495,11 +495,15 @@ $brick: #efae7c;
   &:hover::before,
   &:focus::before {
     background-color: $brick;
+
+    transition: all 0.3s ease;
   }
 
   &:hover::after,
   &:focus::after {
     border-color: transparent transparent transparent $brick;
+
+    transition: all 0.3s ease;
   }
 
   &::before {

@@ -672,9 +672,13 @@ a {
   .section__link:hover, .section__link:focus {
     color: #efae7c; }
   .section__link:hover::before, .section__link:focus::before {
-    background-color: #efae7c; }
+    background-color: #efae7c;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
   .section__link:hover::after, .section__link:focus::after {
-    border-color: transparent transparent transparent #efae7c; }
+    border-color: transparent transparent transparent #efae7c;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
   .section__link::before {
     content: "";
     position: absolute;
