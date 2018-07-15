@@ -70,6 +70,9 @@ $brick: #efae7c;
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
+  &--1600px {
+    max-width: 1600px;
+  }
 }
 
 .body {
@@ -215,6 +218,22 @@ $brick: #efae7c;
 
     background-color: $white;
   }
+}
+
+.button--brick {
+  color: $blue42;
+
+  border: 1px solid $brick;
+  &:hover,
+  &:focus {
+    color: $white;
+
+    background-color: $brick;
+  }
+}
+
+.button--long {
+  min-width: 190px;
 }
 
 // Header
@@ -869,4 +888,79 @@ $brick: #efae7c;
   font-family: $roboto;
   text-align: center;
   color: $white;
+}
+
+// Portfolio
+// =========================================================================
+
+.portfolio {
+  margin-bottom: 100px;
+  padding-top: 150px;
+}
+
+.portfolio__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  &--block {
+    display: block;
+    max-width: 670px;
+  }
+}
+
+.portfolio__gallery {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.portfolio__image {
+  position: relative;
+
+  max-width: 480px;
+  max-height: 390px;
+  margin: 0;
+  margin-right: 60px;
+  margin-bottom: 60px;
+  padding: 0;
+
+  background-color: transparent;
+  &:nth-child(3n + 1) {
+    margin-right: 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 480px;
+    height: 390px;
+    padding-top: 160px;
+
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 60px;
+    font-family: $roboto-slab;
+    vertical-align: middle;
+    text-align: center;
+    color: $white;
+    letter-spacing: -0.002em;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 430px 30px;
+
+    transition: background-color 0.3s ease;
+  }
+  &:hover::before,
+  &:focus::before {
+    content: "Mass Impressions";
+
+    background-color: $brick;
+    background-image: url("../img/portfolio__arrow.svg");
+  }
 }

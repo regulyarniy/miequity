@@ -336,6 +336,8 @@ a {
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px; }
+  .container--1600px {
+    max-width: 1600px; }
 
 .body {
   min-width: 1900px;
@@ -439,6 +441,16 @@ a {
   .button--transparent:hover, .button--transparent:focus {
     color: #423f54;
     background-color: #ffffff; }
+
+.button--brick {
+  color: #423f54;
+  border: 1px solid #efae7c; }
+  .button--brick:hover, .button--brick:focus {
+    color: #ffffff;
+    background-color: #efae7c; }
+
+.button--long {
+  min-width: 190px; }
 
 .header {
   margin: 0;
@@ -1023,3 +1035,73 @@ a {
   font-family: "Roboto", "Arial", sans-serif;
   text-align: center;
   color: #ffffff; }
+
+.portfolio {
+  margin-bottom: 100px;
+  padding-top: 150px; }
+
+.portfolio__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px; }
+  .portfolio__wrapper--block {
+    display: block;
+    max-width: 670px; }
+
+.portfolio__gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.portfolio__image {
+  position: relative;
+  max-width: 480px;
+  max-height: 390px;
+  margin: 0;
+  margin-right: 60px;
+  margin-bottom: 60px;
+  padding: 0;
+  background-color: transparent; }
+  .portfolio__image:nth-child(3n + 1) {
+    margin-right: 0; }
+  .portfolio__image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 480px;
+    height: 390px;
+    padding-top: 160px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 60px;
+    font-family: "Roboto Slab", "Arial", sans-serif;
+    vertical-align: middle;
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: -0.002em;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 430px 30px;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; }
+  .portfolio__image:hover::before, .portfolio__image:focus::before {
+    content: "Mass Impressions";
+    background-color: #efae7c;
+    background-image: url("../img/portfolio__arrow.svg"); }
