@@ -767,7 +767,7 @@ $brick: #efae7c;
   flex-grow: 0;
   flex-shrink: 0;
   align-items: center;
-  margin-top: auto;
+  margin-top: 170px;
   margin-right: auto;
   margin-bottom: 50px;
   margin-left: auto;
@@ -817,18 +817,20 @@ $brick: #efae7c;
 
   display: flex;
   flex-grow: 1;
-  min-height: 1050px;
 
   background-color: #423f54;
 }
 
 .equity__card {
+  position: relative;
+
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 620px;
+  min-height: 1050px;
 }
 
 .equity__card--watches {
@@ -846,6 +848,7 @@ $brick: #efae7c;
 .equity__logo {
   position: absolute;
   top: 200px;
+  left: calc(50% - 200px);
 }
 
 .equity__logo--plane {
@@ -1086,13 +1089,23 @@ $brick: #efae7c;
   color: $gray9a;
 }
 
+.footer__link {
+  transition: all 0.3s ease;
+  &:hover,
+  &:focus {
+    color: $brick;
+  }
+}
+
 .container--copyright {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-content: center;
   min-height: 70px;
+  padding-top: 30px;
   padding-right: 100px;
+  padding-bottom: 30px;
   padding-left: 100px;
 
   border-top: 1px solid rgba($black, 0.2);

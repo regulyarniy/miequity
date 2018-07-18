@@ -917,7 +917,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: auto;
+  margin-top: 170px;
   margin-right: auto;
   margin-bottom: 50px;
   margin-left: auto;
@@ -965,10 +965,10 @@ a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  min-height: 1050px;
   background-color: #423f54; }
 
 .equity__card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -985,7 +985,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 620px; }
+  width: 620px;
+  min-height: 1050px; }
 
 .equity__card--watches {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#d862e6), to(#5468c9));
@@ -1001,7 +1002,8 @@ a {
 
 .equity__logo {
   position: absolute;
-  top: 200px; }
+  top: 200px;
+  left: calc(50% - 200px); }
 
 .equity__logo--plane {
   top: 220px; }
@@ -1217,6 +1219,12 @@ a {
   text-align: right;
   color: #9a98a0; }
 
+.footer__link {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .footer__link:hover, .footer__link:focus {
+    color: #efae7c; }
+
 .container--copyright {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1226,11 +1234,12 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   min-height: 70px;
+  padding-top: 30px;
   padding-right: 100px;
+  padding-bottom: 30px;
   padding-left: 100px;
   border-top: 1px solid rgba(0, 0, 0, 0.2); }
 
