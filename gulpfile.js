@@ -9,6 +9,7 @@ var rename = require("gulp-rename");
 var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var clean = require('gulp-clean');
+var concat = require('gulp-concat');
 var src = 'source/';
 var build = 'build/';
 var cssDirSrc = src + 'css/';
@@ -35,7 +36,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('copy', function() {
-  runSequence('copyHTML', 'copyImages', browserSync.reload);
+  runSequence('copyHTML', 'copyImages', 'copyJS', browserSync.reload);
 });
 
 gulp.task('copyHTML', function() {
@@ -46,6 +47,11 @@ gulp.task('copyHTML', function() {
 gulp.task('copyImages', function() {
   return gulp.src(imgDirSrc + '**/*')
     .pipe(gulp.dest(imgDirBuild));
+})
+
+gulp.task('copyJS', function() {
+  return gulp.src(jsDirSrc + '**/*')
+    .pipe(gulp.dest(jsDirBuild));
 })
 
 gulp.task('browserSync', function() {
@@ -87,7 +93,8 @@ gulp.task('compressCSS', function() {
 
 gulp.task('compressJS', function(cb) {
   pump([
-      gulp.src(jsDirSrc + '*.js'),
+      gulp.src(jsDirSrc + '**/*.js'),
+      concat('script.js'),
       rename({
         dirname: jsDirBuild,
         suffix: '.min'
