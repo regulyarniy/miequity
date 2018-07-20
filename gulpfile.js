@@ -22,7 +22,7 @@ var imgDirBuild = build + 'img/';
 gulp.task('watch', ['browserSync', 'build'], function() {
   gulp.watch(cssDirSrc + '*.scss', ['postCSS']);
   gulp.watch(src + '**/*.*', ['copy']);
-  gulp.watch(jsDirSrc + '*.js', ['compressJS']);
+  gulp.watch(jsDirSrc + '**/*.js', ['compressJS']);
 })
 
 gulp.task('build', function() {
